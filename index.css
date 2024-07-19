@@ -30,10 +30,9 @@ body {
 }
 
 header {
-    height: 110px;
+    height: 80px;
     display: flex;
     align-items: center;
-    padding-block: 10px;
 }
 
 header .site-logo {
@@ -44,12 +43,25 @@ header .site-logo {
     font-size: 25px;
 }
 
+.logout-btn {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+}
+
 header a {
     text-decoration: none;
     color: #4D4D4D;
     font-weight: 600;
-    padding: 5px 15px;
+
+
 }
+
 
 header a:hover {
     color: #161616;
@@ -127,14 +139,24 @@ footer {
     background-size: cover;
     min-height: 100vh;
     color: white;
-    padding: 45px 23px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
+.home-container div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 
 .home-container h1 {
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 42px;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 60px;
+    text-align: center;
 }
 
 .home-container p {
@@ -147,7 +169,7 @@ footer {
     text-decoration: none;
     background-color: #FF8C38;
     border: none;
-    width: 80vh;
+    width: 100%;
     margin-top: 27px;
     padding-block: .75rem;
     color: white;
@@ -158,7 +180,7 @@ footer {
 }
 
 .home-container a:hover {
-    transform: translate(1px, 1px);
+    background-color: #ff8c38;
 }
 
 
@@ -205,12 +227,17 @@ footer {
 
 /*** VAN PAGES ***/
 .van-list-container {
-    padding-inline: 23px
+    padding-inline: 23px;
+}
+.van-list-container h1 {
+    text-align: center;
 }
 
 .van-list-filter-buttons {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .van-list-filter-buttons > a {
@@ -218,11 +245,16 @@ footer {
 }
 
 .van-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
     gap: 34px;
     margin-top: 57px;
+}
+
+.van-tile {
+    /* background-color : green; */
+    max-width: 400px;
 }
 
 .van-tile a {
@@ -312,11 +344,21 @@ i[class*='van-type-'] {
 
 .van-detail {
     display: flex;
-    flex-direction: column;
     color: #161616;
+    gap: 50px;
+    /* background-color: red; */
+    align-items: end;
+    
+
 }
 
+.van-detail div {
+    margin-bottom: 50px;
+}
+
+
 .van-detail img {
+    max-width: 400px;
     border-radius: 5px;
     margin-block: 47px;
 }
